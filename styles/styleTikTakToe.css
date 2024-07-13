@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    background-color: #262626;
+}
+.mainCont{
+    text-align: center;
+    margin-top: 100px;
+}
+.contChet{
+    font-size: 40px;
+    color: aliceblue;
+}
+.cont{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.contField{
+    display: flex;
+    flex-wrap: wrap;
+    width: 310px;
+    margin-top: 30px;
+    gap: 5px;
+    background-color: #FFFAFA;
+    margin-bottom: 20px;
+}
+.gameField{
+    /* border:solid 5px #FFFAFA; */
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 75px;
+    color: #FFFAFA;
+    background-color: #262626;
+}
+.checkCont{
+    margin-top: 10px;
+    color: #FFFAFA;
+    font-size: 30px;
+}
+.contBtn{
+    margin-top: 40px;
+}
+.btnRest{
+    background-color: #FFFAFA;
+    color: #262626;
+    font-weight: 700;
+    font-size: 30px;
+    border: solid 3px;
+    border-radius: 6px;
+    cursor: pointer;
+}
