@@ -1,11 +1,21 @@
 import { checkWin, changePlayer, restart, crtSt} from "./func/func.js"
 
+const coice3x3 = document.getElementById('3x3')
+const coice5x5 = document.getElementById('5x5')
+const coice10x10 = document.getElementById('10x10')
 const gameBlock = document.getElementById('cField');
 const restartBtn = document.getElementById('res-btn');
 const currantPlayer = document.getElementById('currP');
 const checkNumX = document.getElementById('checkNumX');
 const checkNumO = document.getElementById('checkNumO');
 const checkNumXO = document.getElementById('checkNumXO');
+
+coice3x3.onclick = function(){
+    alert("Bogdan Petux")
+}
+coice5x5.onclick = function(){}
+coice10x10.onclick = function(){}
+
 
 let st = {
     'x': 0,

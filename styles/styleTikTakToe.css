@@ -8,6 +8,38 @@
 body{
     background-color: #262626;
 }
+/* 1.Выбор режима */
+.infoForUser{
+    text-align: center;
+    margin-top: 100px;
+    font-size: 50px;
+    color: #FFFAFA;
+}
+.contCard{
+    display: flex;
+    justify-content:center;
+    gap: 10px;
+    margin-top: 50px;
+}
+.contCardInfo{
+    width: 300px;
+    height: 300px;
+    border: #FFFAFA solid 1px;
+    display: flex;
+    justify-content: center;
+}
+.textInfoChoice{
+    margin-top: 95px;
+    font-size: 80px;
+    color: #FFFAFA;
+    cursor: pointer;
+}
+.textInfoChoice:hover{
+    transform: scale(1.1);
+    font-size: 90px;
+}
+
+/* 2.Игра! */
 .mainCont{
     text-align: center;
     margin-top: 100px;
