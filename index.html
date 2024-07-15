@@ -5,42 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
+    <script src="skripts/main.js" defer></script>
     <title>Unreal Games</title>
 </head>
 
 <body>
-    <div class="main_cont">
-        <div class="head">
-            <div class="cont-logo">
-                <a href="index.html" class="logo"><img src="image/Sprite-logo4.png" alt="Logo"></a>
-            </div>
-            <div class="nav-links">
-                <div class="links">
-                    <a href="# hash">Крестики-нолики</a>
-                    <a href="#">Шашки</a>
-                    <a href="#">Шахматы</a>
-                    <a href="#">Информация</a>
-                </div>
-            </div>
+    <aside id="sidebar" class="sidebar">
+        <div class="logoMenu">
+            <h1 class="logo">Games</h1>
+            <p id="toggleBtn" class="toggleBtn">X</p>
         </div>
-
-        <div class="content">
-            <div id="hash" class="game-hash">
-                <img src="image/hash.png" alt="" class="hash-img">
-
-                <div class="text">
-                    <h2 class="title">Крестки нолики</h2>
-                    <p>
-                        Крестики-нолики — логическая игра между двумя противниками на квадратном поле 3 на 3 клетки
-                        или бо́льшего размера (вплоть до «бесконечного поля»). Один из игроков играет «крестиками»,
-                        второй — «ноликами».
-                    </p>
-
-                    <span><a href="/games/hash.html" target="_blank">Играть</a></span>
-                </div>
-            </div>
-        </div>
-    </div>
+        <ul class="list">
+            <li class="listItems active">
+                <a href="#">
+                    <span class="linkName">tic-tac-toe</span>
+                </a>
+            </li>
+            <li class="listItems active">
+                <a href="#">
+                    <span class="linkName">chest</span>
+                </a>
+            </li>
+            <li class="listItems active">
+                <a href="#">
+                    <span class="linkName">chachki</span>
+                </a>
+            </li>
+            <li class="listItems active">
+                <a href="#">
+                    <span class="linkName">snake</span>
+                </a>
+            </li>
+        </ul>
+    </aside>
+    <nav id="head" class="head">
+        
+    </nav>
 </body>
 
 </html>

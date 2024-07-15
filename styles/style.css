@@ -1,77 +1,157 @@
 *{
     margin: 0;
     padding: 0;
-    color: aliceblue;
     list-style: none;
     text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
 }
 body{
-background-color: black;
+    background-color: #262626;
 }
-
-.head{
-    background: linear-gradient(#523517,70%,black);
-    height: 240px;
+/* sidebar */
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    width: 260px;
+    height: 100%;
+    border-right:2px solid rgba(255,255,255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    padding: 6px 14px;
+    transition: 0.5s;
+}
+.sidebar.active{
+    width: 0;
+    border-right: none;
+    box-shadow: none;
+}
+.logoMenu{
     display: flex;
-    justify-content: space-around;
+    width: 100%;
+    height: 70px;
+    align-items: center;
 }
-.logo>img{
-    height: 240px;
+.logo{
+    font-size: 40px;
+    color: #FFFAFA;
+    pointer-events: none;
 }
-.nav-links{
+.sidebar.active .logo{
+    opacity: 0;
+    transition: 0.2s;
+}
+.toggleBtn{
+    position: absolute;
+    left: 90%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    color: #FFFAFA;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.list{
+    margin-top: 10px;
+}
+.listItems{
+    width: 100%;
+    height: 50px;
+    margin: 5px 0;
+    line-height: 50px;
+}
+.listItems>a{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    font-size: 20px;
+    color: #FFFAFA;
+    border-radius: 6px;
+    white-space:nowrap;
 }
-.links{
-    border: 1px solid #fff;
-    border-radius: 20px;
-    padding: 10px 10px;
+.sidebar.active a{
+    opacity: 0;
+    transition: 0.2s;
+    pointer-events: none;
 }
-.links>a{
-    font-size: 32px;
-    margin: 20px;
-    font-weight: bold;
+.listItems.active a:hover{
+    background-color: rgba(255,255,255, 0.2);
+    transition: 0.3s;
 }
-.nav-links>div>a:hover{
-    color: #000;
+
+/* head */
+.head{
+    margin-left: 288px;
+    width: 100%;
+    height: 90px;
+    background-color: rgba(255, 255, 255,0.1);
+    transition: 0.5s;
+}
+.head.active{
+    margin: 0;
 }
 
 
-/* cont */
-.content{
-    margin: 100px 0px;
+/* phone */
+@media (max-width: 540px){  
+    .sidebar{
+        width: 0;
+        border-right: none;
+        box-shadow: none;
+        margin-top: 20px;
+    }
+    .sidebar.active{
+        position: fixed;
+        top: 0;
+        left: 0;
+        /* background-color: rgba(255, 255, 255, 0.1); */
+        width: 260px;
+        height: 100%;
+        border-right:2px solid rgba(255,255,255, 0.1);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        padding: 6px 14px;
+        transition: 0.5s;
+        margin-top: 20px;
+    }
+    .logo{
+        font-size: 40px;
+        color: #FFFAFA;
+        pointer-events: none;
+        opacity: 0;
+    }
+    .sidebar.active .logo{
+        opacity: 1;
+        transition: 0.2s;
+    }
+    .listItems>a{
+        display: flex;
+        align-items: center;
+        font-size: 20px;
+        color: #FFFAFA;
+        border-radius: 6px;
+        white-space:nowrap;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .sidebar.active a{
+        opacity: 1;
+        transition: 0.2s;
+        pointer-events:visible;
+    }
 
-}
-.game-hash{
-    display: flex;
-    margin: 50px 50px;
-}
-.hash-img{
-    max-width: 400px;
-    width: 50%;
-    max-height: 400px;
-    height: 50%;
-}
-.text{
-    display: flex;
-    font-size: 30px;
-    margin: 0px 20px;
-    flex-direction: column;
-    text-align: center;
-}
-.title{
-    font-size: 45px;
-}
-.text>p{
-    margin: 20px 0px;
-}
-.text>span>a{
-    border-style: solid;
-    border-radius: 20px;
-    padding: 5px 15px;
-    background-color: #523517;
-}
-.text>span>a:hover{
-    color: green;
+    .head{
+        margin:0;
+        width: 100%;
+        height: 110px;
+        background-color: rgba(255, 255, 255,0.1);
+        transition: 0.5s;
+    }
+    .head.active{
+        margin-left: 288px;
+        width: 100%;
+        height: 110px;
+        background-color: rgba(255, 255, 255,0.1);
+        transition: 0.5s;
+    }
 }
