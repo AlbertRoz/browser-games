@@ -1,8 +1,8 @@
 const sidebar = document.getElementById('sidebar');
-const toggleBtn = document.getElementById('toggleBtn');
-const head = document.getElementById('head')
+const head = document.getElementById('head');
+const toggleNavBtn = document.getElementById('toggleNavBtn');
 
-toggleBtn.addEventListener('click',function(){
+toggleNavBtn.addEventListener('click',function(){
     sidebar.classList.toggle('active')
     head.classList.toggle('active')
 })
