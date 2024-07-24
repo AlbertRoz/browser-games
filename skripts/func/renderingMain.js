@@ -7,25 +7,25 @@ let spanNameCard = tempCardGames.content.querySelector('span');
 
 
 divCardCont.id = 'card-1';
-imgCard.src = 'image/tictactoe.png';
+imgCard.src = 'styles/tictactoe.png';
 spanNameCard.textContent = 'Tic-Tac-Toe';
 let cloneCardGames = tempCardGames.content.cloneNode(true);
 contentContainer.append(cloneCardGames);
 
 divCardCont.id = 'card-2';
-imgCard.src = 'image/snake.png';
+imgCard.src = 'styles/snake.png';
 spanNameCard.textContent = 'Snake';
 cloneCardGames = tempCardGames.content.cloneNode(true);
 contentContainer.append(cloneCardGames);
 
 divCardCont.id = 'card-3';
-imgCard.src = 'image/checkers.png';
+imgCard.src = 'styles/checkers.png';
 spanNameCard.textContent = 'Checkers';
 cloneCardGames = tempCardGames.content.cloneNode(true);
 contentContainer.append(cloneCardGames);
 
 divCardCont.id = 'card-4';
-imgCard.src = 'image/chest.png';
+imgCard.src = 'styles/chest.png';
 spanNameCard.textContent = 'Chest';
 cloneCardGames = tempCardGames.content.cloneNode(true);
 contentContainer.append(cloneCardGames);
