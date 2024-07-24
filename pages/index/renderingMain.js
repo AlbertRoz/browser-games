@@ -7,25 +7,25 @@ let spanNameCard = tempCardGames.content.querySelector('span');
 
 
 divCardCont.id = 'card-1';
-imgCard.src = 'styles/tictactoe.png';
+imgCard.src = 'tictactoe.png';
 spanNameCard.textContent = 'Tic-Tac-Toe';
 let cloneCardGames = tempCardGames.content.cloneNode(true);
 contentContainer.append(cloneCardGames);
 
 divCardCont.id = 'card-2';
-imgCard.src = 'styles/snake.png';
+imgCard.src = 'snake.png';
 spanNameCard.textContent = 'Snake';
 cloneCardGames = tempCardGames.content.cloneNode(true);
 contentContainer.append(cloneCardGames);
 
 divCardCont.id = 'card-3';
-imgCard.src = 'styles/checkers.png';
+imgCard.src = 'checkers.png';
 spanNameCard.textContent = 'Checkers';
 cloneCardGames = tempCardGames.content.cloneNode(true);
 contentContainer.append(cloneCardGames);
 
 divCardCont.id = 'card-4';
-imgCard.src = 'styles/chest.png';
+imgCard.src = 'chest.png';
 spanNameCard.textContent = 'Chest';
 cloneCardGames = tempCardGames.content.cloneNode(true);
 contentContainer.append(cloneCardGames);
@@ -33,5 +33,5 @@ contentContainer.append(cloneCardGames);
 const linkGameTTT = document.getElementById('card-1');
 
 linkGameTTT.addEventListener('click',function(){
-    location.href = 'games/tic-tak-toe/tic-tak-toe Game.html';
+    location.href = '/pages/tic-tac-toe/tic-tac-toe-game.html';
 });
