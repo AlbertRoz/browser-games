@@ -8,8 +8,6 @@ let contentBlock = document.getElementById('content');
 let imgUser = document.getElementById('imgUser');
 const comeAcc = document.getElementById('comeAcc');
 
-imgUser.src = 'image/user-img-acc.jpg';
-
 toggleNavBtn.addEventListener('click', function () {
     sidebar.classList.toggle('active');
     head.classList.toggle('active');
