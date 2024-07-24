@@ -33,5 +33,5 @@ contentContainer.append(cloneCardGames);
 const linkGameTTT = document.getElementById('card-1');
 
 linkGameTTT.addEventListener('click',function(){
-    location.href = 'games/tic-tak-toe Game.html';
+    location.href = 'games/tic-tak-toe/tic-tak-toe Game.html';
 });

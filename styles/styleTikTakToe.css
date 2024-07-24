@@ -17,9 +17,13 @@
     transform: scale(1.1);
     font-size: 90px;
 }
+.contCardInfo.off{
+    display: none;
+}
+
 
 /* 2.Игра! */
-/* .mainCont{
+.mainCont{
     text-align: center;
     margin-top: 100px;
 }
@@ -66,4 +70,4 @@
     border: solid 3px;
     border-radius: 6px;
     cursor: pointer;
-} */
+}

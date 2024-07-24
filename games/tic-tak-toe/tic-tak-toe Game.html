@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/styleTikTakToe.css">
     <script src="/skripts/main.js" defer></script>
-    <script src="/skripts/func/renderigTTTSeting.js" defer></script>
+    <script type="module" src="/skripts/func/renderigTTTSeting.js" defer></script>
     <title>Tic-Tac-Toe</title>
 </head>
 
@@ -63,28 +63,28 @@
                     <p class="textInfoChoice"></p>
                 </div>
             </template>
-
-
-            <!-- <template>
-                <div class="mainCont">
-                    <div id="chet" class="contChet">
-                        <p>Ходит - <span id="currP"></span></p>
-                    </div>
-                    <div class="cont">
-                        <div id="cField" class="contField"></div>
-                    </div>
-                    <div class="checkCont">
-                        <p>Победа X - <span id="checkNumX">0</span></p>
-                    </div>
-                    <div class="checkCont">
-                        <p>Победа O - <span id="checkNumO">0</span></p>
-                    </div>
-                    <div class="checkCont">
-                        <p>Ничья XO - <span id="checkNumXO">0</span></p>
-                    </div>
-                    <div class="contBtn"><button id="res-btn" class="btnRest">Рестарт</button></div>
+            <!-- <template> -->
+            <!-- </template> -->
+        </div>
+        <div id="ConGame" class="content-games">
+            <div class="mainCont">
+                <div id="chet" class="contChet">
+                    <p>Ходит - <span id="currP"></span></p>
                 </div>
-            </template> -->
+                <div class="cont">
+                    <div id="cField" class="contField"></div>
+                </div>
+                <div class="checkCont">
+                    <p>Победа X - <span id="checkNumX">0</span></p>
+                </div>
+                <div class="checkCont">
+                    <p>Победа O - <span id="checkNumO">0</span></p>
+                </div>
+                <div class="checkCont">
+                    <p>Ничья XO - <span id="checkNumXO">0</span></p>
+                </div>
+                <div class="contBtn"><button id="res-btn" class="btnRest">Рестарт</button></div>
+            </div>
         </div>
         <div class="blocker" id="blocker"></div>
     </div>

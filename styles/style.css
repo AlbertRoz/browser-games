@@ -166,9 +166,6 @@ body{
         margin-top: auto;
         margin-bottom: auto;
     }
-    /* .centr{
-        пока ни хрена нету!
-    } */
     .logo{
         font-size: 40px;
         color: #FFFAFA;
@@ -237,9 +234,9 @@ body{
         width: 100%;
         height: 100%;
     }
-    .content{
+    /* .content{
 
-    }
+    } */
     .blocker.active{
         margin-left: 288px;
         display: block;
