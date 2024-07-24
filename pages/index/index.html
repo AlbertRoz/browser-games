@@ -4,24 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/styleTikTakToe.css">
-    <script src="/skripts/main.js" defer></script>
-    <script type="module" src="/skripts/func/renderigTTTSeting.js" defer></script>
-    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <script src="renderingMain.js" defer></script>
+    <title>Unreal Games</title>
 </head>
 
 <body>
     <aside id="sidebar" class="sidebar">
         <div class="accCont">
             <div id="comeAcc" class="acc">
-                <div class="imgCon"><img id="imgUser" src="/image/user-img-acc.jpg" alt=""></div>
+                <div class="imgCon"><img id="imgUser" src="user-img-acc.jpg" alt=""></div>
                 <span class="nameUser">sign in</span>
             </div>
         </div>
         <ul class="list">
             <li id="btnGames" class="listItems active">
-                <a href="/index.html">
+                <a href="/pages/index/index.html">
                     <span class="linkName">games</span>
                 </a>
             </li>
@@ -55,37 +54,21 @@
                 <div class="centr">
                     <a class="logo" href="#">Games</a>
                 </div>
-                <div class="right" id=""></div>
+                <div class="right" id="">
+
+                </div>
             </div>
         </div>
     </nav>
     <div class="main-cont" id="content">
         <div id="contentCont" class="content">
-            <template id="cardSetings">
-                <div class="contCardInfo">
-                    <p class="textInfoChoice"></p>
+
+            <template id="cardGames">
+                <div class="card-cont">
+                    <img id="imgCard" src="" alt="">
+                    <div><span id="nameCard"></span></div>
                 </div>
             </template>
-        </div>
-        <div id="ConGame" class="content-games">
-            <div class="mainCont">
-                <div id="chet" class="contChet">
-                    <p>Ходит - <span id="currP"></span></p>
-                </div>
-                <div class="cont">
-                    <div id="cField" class="contField"></div>
-                </div>
-                <div class="checkCont">
-                    <p>Победа X - <span id="checkNumX">0</span></p>
-                </div>
-                <div class="checkCont">
-                    <p>Победа O - <span id="checkNumO">0</span></p>
-                </div>
-                <div class="checkCont">
-                    <p>Ничья XO - <span id="checkNumXO">0</span></p>
-                </div>
-                <div class="contBtn"><button id="res-btn" class="btnRest">Рестарт</button></div>
-            </div>
         </div>
         <div class="blocker" id="blocker"></div>
     </div>
