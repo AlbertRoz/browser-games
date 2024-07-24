@@ -5,6 +5,10 @@ const contant = document.getElementById('content');
 const blocker = document.getElementById('blocker');
 const gamesBtn = document.getElementById('btnGames');
 let contentBlock = document.getElementById('content');
+let imgUser = document.getElementById('imgUser');
+const comeAcc = document.getElementById('comeAcc');
+
+imgUser.src = 'image/user-img-acc.jpg';
 
 toggleNavBtn.addEventListener('click', function () {
     sidebar.classList.toggle('active');
@@ -19,3 +23,9 @@ blocker.addEventListener('click', function () {
     contant.classList.toggle('active');
     blocker.classList.toggle('active');
 })
+
+comeAcc.addEventListener('click', register);
+
+function register(){
+
+}
