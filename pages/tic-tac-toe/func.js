@@ -1,9 +1,25 @@
-export function checkWin(arrayField, winIndex) {
-    for (let i in winIndex) {
+export function checkWin(arrayField, winIndex1) {
+    for (let i in winIndex1) {
         let win = true
 
-        for (let j in winIndex[i]) {
-            let id = winIndex[i][j]
+        for (let j in winIndex1[i]) {
+            let id = winIndex1[i][j]
+            let ind = arrayField.indexOf(id)
+
+            if (ind == -1) {
+                win = false
+            }
+        }
+        if (win) return true
+    }
+    return false
+}
+export function checkWin2(arrayField, winIndex2) {
+    for (let i in winIndex2) {
+        let win = true
+
+        for (let j in winIndex2[i]) {
+            let id = winIndex2[i][j]
             let ind = arrayField.indexOf(id)
 
             if (ind == -1) {

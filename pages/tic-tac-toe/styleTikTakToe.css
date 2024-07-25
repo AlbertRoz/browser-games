@@ -46,7 +46,24 @@
     background-color: #FFFAFA;
     margin-bottom: 20px;
 }
+.contField.two{
+    display: flex;
+    flex-wrap: wrap;
+    width: 625px;
+    margin-top: 30px;
+    gap: 5px;
+    background-color: #FFFAFA;
+    margin-bottom: 20px;
+}
 .gameField{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 75px;
+    color: #FFFAFA;
+    background-color: #262626;
+}
+.gameFieldTwo{
     width: 100px;
     height: 100px;
     cursor: pointer;
@@ -70,4 +87,44 @@
     border: solid 3px;
     border-radius: 6px;
     cursor: pointer;
+}
+
+@media(max-width:680px){
+    .contField.two{
+        display: flex;
+        flex-wrap: wrap;
+        width: 445px;
+        margin-top: 30px;
+        gap: 5px;
+        background-color: #FFFAFA;
+        margin-bottom: 20px;
+    }
+    .gameFieldTwo{
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+        font-size: 55px;
+        color: #FFFAFA;
+        background-color: #262626;
+    }
+}
+
+@media(max-width:480px){
+    .contField.two{
+        display: flex;
+        flex-wrap: wrap;
+        width: 355px;
+        margin-top: 30px;
+        gap: 5px;
+        background-color: #FFFAFA;
+        margin-bottom: 20px;
+    }
+    .gameFieldTwo{
+        width: 55px;
+        height: 55px;
+        cursor: pointer;
+        font-size: 42.5px;
+        color: #FFFAFA;
+        background-color: #262626;
+    }
 }
