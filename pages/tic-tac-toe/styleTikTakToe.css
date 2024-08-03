@@ -1,85 +1,42 @@
-/* 1.Выбор режима */
-.contCardInfo{
-    width: 250px;
-    height: 250px;
-    border: #FFFAFA solid 1px;
-    display: flex;
-    justify-content: center;
-    margin: 20px 5px;
-}
-.textInfoChoice{
-    margin:auto;
-    font-size: 60px;
-    color: #FFFAFA;
-    cursor: pointer;
-}
-.textInfoChoice:hover{
-    transform: scale(1.1);
-    font-size: 90px;
-}
-.contCardInfo.off{
-    display: none;
-}
-
 
 /* 2.Игра! */
-.mainCont{
-    text-align: center;
+.mainCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 100px;
+    
 }
-.contChet{
+
+.contChet {
     font-size: 40px;
     color: aliceblue;
 }
-.cont{
+
+/* .cont {
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-}
-.contField{
-    display: flex;
-    flex-wrap: wrap;
+} */
+
+the-field {
     width: 310px;
     margin-top: 30px;
-    gap: 5px;
-    background-color: #FFFAFA;
     margin-bottom: 20px;
 }
-.contField.two{
-    display: flex;
-    flex-wrap: wrap;
-    width: 625px;
-    margin-top: 30px;
-    gap: 5px;
-    background-color: #FFFAFA;
-    margin-bottom: 20px;
-}
-.gameField{
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    font-size: 75px;
-    color: #FFFAFA;
-    background-color: #262626;
-}
-.gameFieldTwo{
-    width: 100px;
-    height: 100px;
-    cursor: pointer;
-    font-size: 75px;
-    color: #FFFAFA;
-    background-color: #262626;
-}
-.checkCont{
+
+.checkCont {
     margin-top: 10px;
     color: #FFFAFA;
     font-size: 30px;
 }
-.contBtn{
+
+.contBtn {
     margin-top: 40px;
 }
-.btnRest{
+
+.btnRest {
     background-color: #FFFAFA;
     color: #262626;
     font-weight: 700;
@@ -89,8 +46,8 @@
     cursor: pointer;
 }
 
-@media(max-width:680px){
-    .contField.two{
+@media(max-width:680px) {
+    #field.two {
         display: flex;
         flex-wrap: wrap;
         width: 445px;
@@ -99,7 +56,8 @@
         background-color: #FFFAFA;
         margin-bottom: 20px;
     }
-    .gameFieldTwo{
+
+    .gameFieldTwo {
         width: 70px;
         height: 70px;
         cursor: pointer;
@@ -109,8 +67,8 @@
     }
 }
 
-@media(max-width:480px){
-    .contField.two{
+@media(max-width:480px) {
+    #field.two {
         display: flex;
         flex-wrap: wrap;
         width: 355px;
@@ -119,7 +77,8 @@
         background-color: #FFFAFA;
         margin-bottom: 20px;
     }
-    .gameFieldTwo{
+
+    .gameFieldTwo {
         width: 55px;
         height: 55px;
         cursor: pointer;
