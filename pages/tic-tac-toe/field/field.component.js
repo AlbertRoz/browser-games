@@ -28,10 +28,28 @@ class TheFieldComponent extends HTMLElement {
 
         this.innerHTML+=`
             <style>  
-                the-field {
+                .one{
                     display: flex;
                     flex-wrap: wrap;
                     width: 310px;
+                    margin-top: 30px;
+                    gap: 5px;
+                    background-color: #FFFAFA;
+                    margin-bottom: 20px;
+                }
+                .two{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 415px;
+                    margin-top: 30px;
+                    gap: 5px;
+                    background-color: #FFFAFA;
+                    margin-bottom: 20px;
+                }
+                .three{
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 520px;
                     margin-top: 30px;
                     gap: 5px;
                     background-color: #FFFAFA;

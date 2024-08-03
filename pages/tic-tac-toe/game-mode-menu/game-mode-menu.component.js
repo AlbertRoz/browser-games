@@ -19,18 +19,20 @@ class GameModeMenuComponent extends HTMLElement {
         this.innerHTML += `
             <style>
                 game-mode-menu{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap:10px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap:10px;
                 }
                 .contCardInfo {
+                    cursor: pointer;
                     width: 250px;
                     height: 250px;
-                    border: #FFFAFA solid 1px;
+                    border: #FFFAFA solid 1px ;
                     display: flex;
                     justify-content: center;
                     margin: 20px 5px;
+                    border-radius: 10px;
                 }
                 .textInfoChoice {
                     margin: auto;
@@ -38,10 +40,16 @@ class GameModeMenuComponent extends HTMLElement {
                     color: #FFFAFA;
                     cursor: pointer;
                 }
+                .contCardInfo:hover {
+                    transition: 0.3s;
+                    transform: scale(1.1);
+                    font-size: 90px;
+                    border-color:#ff0000
+                }
                 .textInfoChoice:hover {
                     transform: scale(1.1);
                     font-size: 90px;
-                }
+                }    
             </style>
         `
     }

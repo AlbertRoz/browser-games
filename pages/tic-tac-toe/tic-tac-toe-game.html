@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styleTikTakToe.css">
     <script src="/pages/index/main.js" defer></script>
     <script type="module" src="/pages/tic-tac-toe/game-mode-menu/game-mode-menu.component.js"></script>
+    <script type="module" src="/pages/tic-tac-toe/game/conponent.game.js"></script>
     <script type="module" src="/pages/tic-tac-toe/game/game.js"></script>
     <script type="module" src="/pages/tic-tac-toe/field/field.component.js"></script>
     <title>Tic-Tac-Toe</title>
@@ -65,27 +66,7 @@
         <div id="contentCont" class="content">
             <game-mode-menu></game-mode-menu>
         </div>
-        <div id="ConGame" class="content-games">
-            <div class="mainCont">
-                <div id="chet" class="contChet">
-                    <p>Ходит - <span id="currP"></span></p>
-                </div>
-                <!-- поле!! -->
-                <div id="field-placement-anchore">
-
-                </div>
-                <div class="checkCont">
-                    <p>Победа X - <span id="checkNumX">0</span></p>
-                </div>
-                <div class="checkCont">
-                    <p>Победа O - <span id="checkNumO">0</span></p>
-                </div>
-                <div class="checkCont">
-                    <p>Ничья XO - <span id="checkNumXO">0</span></p>
-                </div>
-                <div class="contBtn"><button id="res-btn" class="btnRest">Рестарт</button></div>
-            </div>
-        </div>
+        <div id="ConGame" class="content-games"></div>
         <div class="blocker" id="blocker"></div>
     </div>
 </body>
