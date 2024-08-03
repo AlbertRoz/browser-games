@@ -8,43 +8,7 @@
     
 }
 
-.contChet {
-    font-size: 40px;
-    color: aliceblue;
-}
-
-/* .cont {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-} */
-
-the-field {
-    width: 310px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-.checkCont {
-    margin-top: 10px;
-    color: #FFFAFA;
-    font-size: 30px;
-}
-
-.contBtn {
-    margin-top: 40px;
-}
-
-.btnRest {
-    background-color: #FFFAFA;
-    color: #262626;
-    font-weight: 700;
-    font-size: 30px;
-    border: solid 3px;
-    border-radius: 6px;
-    cursor: pointer;
-}
+/* why ????? */
 
 @media(max-width:680px) {
     #field.two {
