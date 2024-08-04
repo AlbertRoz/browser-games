@@ -11,9 +11,9 @@ class GameModeMenuComponent extends HTMLElement {
 
     render() {
 
-        this.innerHTML += `<div id="gameSating3x3" class="contCardInfo"><p class="textInfoChoice">3x3</p></div>`
-        this.innerHTML += `<div id="gameSating4x4" class="contCardInfo"><p class="textInfoChoice">4x4</p></div>`
-        this.innerHTML += `<div id="gameSating5x5" class="contCardInfo"><p class="textInfoChoice">5x5</p></div>`
+        this.innerHTML += `<div id="gameSating3x3" class="contCardInfo3x3"><p class="textInfoChoice3x3">3x3</p></div>`
+        this.innerHTML += `<div id="gameSating4x4" class="contCardInfo4x4"><p class="textInfoChoice4x4">4x4</p></div>`
+        this.innerHTML += `<div id="gameSating5x5" class="contCardInfo5x5"><p class="textInfoChoice5x5">5x5</p></div>`
 
 
         this.innerHTML += `
@@ -24,7 +24,7 @@ class GameModeMenuComponent extends HTMLElement {
                     justify-content: center;
                     gap:10px;
                 }
-                .contCardInfo {
+                .contCardInfo3x3 {
                     cursor: pointer;
                     width: 250px;
                     height: 250px;
@@ -34,22 +34,77 @@ class GameModeMenuComponent extends HTMLElement {
                     margin: 20px 5px;
                     border-radius: 10px;
                 }
-                .textInfoChoice {
+                .contCardInfo4x4 {
+                    cursor: pointer;
+                    width: 250px;
+                    height: 250px;
+                    border: #FFFAFA solid 1px ;
+                    display: flex;
+                    justify-content: center;
+                    margin: 20px 5px;
+                    border-radius: 10px;
+                }
+                .contCardInfo5x5 {
+                    cursor: pointer;
+                    width: 250px;
+                    height: 250px;
+                    border: #FFFAFA solid 1px ;
+                    display: flex;
+                    justify-content: center;
+                    margin: 20px 5px;
+                    border-radius: 10px;
+                }
+                .textInfoChoice3x3 {
                     margin: auto;
                     font-size: 60px;
                     color: #FFFAFA;
                     cursor: pointer;
                 }
-                .contCardInfo:hover {
+                .textInfoChoice4x4 {
+                    margin: auto;
+                    font-size: 60px;
+                    color: #FFFAFA;
+                    cursor: pointer;
+                }
+                .textInfoChoice5x5 {
+                    margin: auto;
+                    font-size: 60px;
+                    color: #FFFAFA;
+                    cursor: pointer;
+                }
+                .contCardInfo3x3:hover {
                     transition: 0.3s;
                     transform: scale(1.1);
                     font-size: 90px;
-                    border-color:#ff0000
+                    border-color:#008000
                 }
-                .textInfoChoice:hover {
+                .contCardInfo4x4:hover {
+                    transition: 0.3s;
                     transform: scale(1.1);
                     font-size: 90px;
+                    border-color:#FFFF00
+                }
+                .contCardInfo5x5:hover {
+                    transition: 0.3s;
+                    transform: scale(1.1);
+                    font-size: 90px;
+                    border-color:#FFA500
+                }
+                .textInfoChoice3x3:hover {
+                    transform: scale(1.1);
+                    font-size: 90px;
+                    color: #008000;
+                }
+                .textInfoChoice4x4:hover {
+                    transform: scale(1.1);
+                    font-size: 90px;
+                    color: #FFFF00;
                 }    
+                .textInfoChoice5x5:hover {
+                    transform: scale(1.1);
+                    font-size: 90px;
+                    color: #FFA500;
+                }        
             </style>
         `
     }
