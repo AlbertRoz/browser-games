@@ -1,32 +1,44 @@
+
 import { store } from "/utils/store.js";
 
-class TheFieldComponent extends HTMLElement {
+export class TheFieldComponent extends HTMLElement {
 
-    field
 
     constructor() {
-        // Always call super first in constructor
-        super();
         
+        super();
+
         const modelId = this.getAttribute('model-id')
+        /**это свойство содержит поле */
         this.field = store.get(modelId)
         this.render()
+
+        this.querySelectorAll('[is-cell]')
+
+        for(const elementCell of this.querySelectorAll('[is-cell]')){
+            elementCell.addEventListener('click', (event)=>{
+                event.target.getAttribute('cell-position')
+                const position = JSON.parse(event.target.getAttribute('cell-position'))
+            })
+        }
     }
 
-    render(){
-        for(const rowIndex in this.field.content){
+    render() {
+        this.innerHTML = ''
+        for (const rowIndex in this.field.content) {
             const row = this.field.content[rowIndex]
-            for(const cellIndex in row){
+            for (const cellIndex in row) {
                 const cell = row[cellIndex]
                 const cellPosition = {
-                    y:rowIndex,
-                    x:cellIndex,
+                    y: rowIndex,
+                    x: cellIndex,
                 }
-                this.innerHTML += `<div class="gameField" cell-position="${JSON.stringify(cellPosition)}">${cell}</div>`
+                this.innerHTML += `<div is-cell class="gameField" cell-position='${JSON.stringify(cellPosition)}'>${cell}</div>`
+
             }
         }
 
-        this.innerHTML+=`
+        this.innerHTML += `
             <style>  
                 .one{
                     display: flex;
