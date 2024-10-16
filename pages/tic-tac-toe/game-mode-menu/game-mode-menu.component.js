@@ -7,13 +7,26 @@ class GameModeMenuComponent extends HTMLElement {
         super();
         
         this.render()
+        this.querySelector('#gameSating3x3').addEventListener('click', (event)=> {
+            let costomEvent = new CustomEvent('change-game-mode', {bubbles: true, detail:{height:3,width:3}})
+            this.dispatchEvent(costomEvent)
+        })
+        this.querySelector('#gameSating4x4').addEventListener('click', (event)=> {
+            let costomEvent = new CustomEvent('change-game-mode', {bubbles: true, detail:{height:5,width:5}})
+            this.dispatchEvent(costomEvent)
+        })
+        this.querySelector('#gameSating5x5').addEventListener('click', (event)=> {
+            let costomEvent = new CustomEvent('change-game-mode', {bubbles: true, detail:{height:5,width:5}})
+            this.dispatchEvent(costomEvent)
+        })
     }
 
     render() {
-
+        this.innerHTML = ''
         this.innerHTML += `<div id="gameSating3x3" class="contCardInfo3x3"><p class="textInfoChoice3x3">3x3</p></div>`
         this.innerHTML += `<div id="gameSating4x4" class="contCardInfo4x4"><p class="textInfoChoice4x4">4x4</p></div>`
         this.innerHTML += `<div id="gameSating5x5" class="contCardInfo5x5"><p class="textInfoChoice5x5">5x5</p></div>`
+
 
 
         this.innerHTML += `
