@@ -8,6 +8,7 @@ let contentBlock = document.getElementById('content');
 let imgUser = document.getElementById('imgUser');
 const comeAcc = document.getElementById('comeAcc');
 
+// позже придумать как их объединить
 toggleNavBtn.addEventListener('click', function () {
     sidebar.classList.toggle('active');
     head.classList.toggle('active');
@@ -22,8 +23,8 @@ blocker.addEventListener('click', function () {
     blocker.classList.toggle('active');
 })
 
-comeAcc.addEventListener('click', register);
+// comeAcc.addEventListener('click', register);
 
-function register(){
+// function register(){
 
-}
+// }
