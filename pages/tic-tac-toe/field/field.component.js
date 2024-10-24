@@ -1,4 +1,4 @@
-
+import { Field } from "../field/field.model.js";
 import { store } from "/utils/store.js";
 
 export class TheFieldComponent extends HTMLElement {
@@ -17,8 +17,10 @@ export class TheFieldComponent extends HTMLElement {
 
         for(const elementCell of this.querySelectorAll('[is-cell]')){
             elementCell.addEventListener('click', (event)=>{
-                event.target.getAttribute('cell-position')
+                event.target.getAttribute('cell-position')  
                 const position = JSON.parse(event.target.getAttribute('cell-position'))
+                console.log(position)
+
             })
         }
     }
