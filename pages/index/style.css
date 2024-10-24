@@ -127,12 +127,15 @@ body{
 .card-cont{
     width: 200px;
     height: 300px;
-    border: 2px solid rgba(255,255,255, 0.1);;
+    border: 2px solid rgba(255,255,255, 0.1);
+    border-radius: 15px;
     background-color: #07000028;
     margin: 20px 5px;
     cursor: pointer;
 }
 .card-cont img{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
     width: 200px;
     height: 200px;
 }
@@ -147,6 +150,11 @@ body{
 .card-cont span{
     color: #FFFAFA;
     font-size: 28px;
+}
+.card-cont:hover{
+    transition: 0.5s;
+    transform: perspective(300px) rotateY(10deg);
+    border: 2px solid rgba(255, 255, 255, 0.584);
 }
 
 
