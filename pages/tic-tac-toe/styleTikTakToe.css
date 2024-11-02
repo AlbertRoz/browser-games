@@ -1,4 +1,3 @@
-
 /* 2.Игра! */
 .mainCont {
     display: flex;
@@ -6,6 +5,57 @@
     align-items: center;
     margin-top: 100px;
 }
+.nameMenu{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 50px; 
+    color: #FFFAFA;   
+}
+.containerCardsChoice {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+.choiceField{
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin: 20px 5px;
+    align-items: center;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.9);
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(3px);
+    border-radius: 20px;
+    user-select: none;
+}
+.choiceField>p{
+    font-size: 60px;
+    color: #FFFAFA;
+}
+.choiceField:hover{
+    p{
+        color: green;
+        transition: 0.3s;
+        transform: scale(1.1);
+    }
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+
+
+
+
+
+
+
+
+
 
 /* why ????? */
 
