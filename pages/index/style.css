@@ -17,6 +17,7 @@ body{
     height: 100%;
     border-right:2px solid rgba(255,255,255, 0.1);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    user-select: none;
 
 }
 .accCont{
@@ -101,6 +102,7 @@ body{
 .logo{
     font-size: 40px;
     color: #FFFAFA;
+    user-select: none;
 }
 .toggleNavBtn{
     opacity: 0;
@@ -132,6 +134,7 @@ body{
     background-color: #07000028;
     margin: 20px 5px;
     cursor: pointer;
+    user-select: none;
 }
 .card-cont img{
     border-top-left-radius: 15px;
