@@ -9,32 +9,39 @@
 #root {
     display: grid;
     grid-template-areas: 
-            "head head"
-            "sidebar content"
-            "sidebar content";
-    grid-template-rows: 100px 1fr;
+    "sidebar head"
+    "sidebar content";
+    grid-template-rows: 100px 1fr ;
     grid-template-columns: 260px 1fr;
 }
 
 #head {
     grid-area: head;
-    display: flex;
-    justify-content: center;
 }
 #logoText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(255,255,255, 0.1); */
     color: #FFFAFA;
     font-size: 50px;
     user-select: none;
     cursor: pointer;
-    height: min-content;
+    height: 100px;
 }
 
 #sidebar {
     grid-area: sidebar;
+    /* border-right: #FFFAFA solid 1px; */
 }
 .sidebar-cont{
+    margin-top: 20px;
     margin-left: 16px;
     
+}
+.active{
+    font-weight: bold;
+    background-color: rgba(255,255,255, 0.2);
 }
 .sidebar-cont>a{
     font-size: 28px;
@@ -50,6 +57,16 @@
     transition: 0.2s;
 }
 
-#contant {
-    grid-area: contant;
+#content {
+    grid-area: content;
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+input{
+    display: block;
+    height: 60px;
+    font-size: 40px;
+    margin-bottom: 16px;
 }

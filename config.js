@@ -4,8 +4,8 @@ export const config = {
             href:'/login',
             name:'Login'
         },
-        main:{
-            href: '/main',
+        games:{
+            href: '/games',
             name: 'Games'
         },
         chat:{
@@ -28,4 +28,27 @@ export const config = {
             name: 'Games'
         },
     },
+
+    gameCard: {
+        tictactoe:{
+            href: '/tictactoe',
+            name: 'TicTacToe'
+        },
+        snake:{
+            href: '/snake',
+            name: 'Snake'
+        },
+        rockpaperscissors:{
+            href: '/rock-paper-scissors',
+            name: 'Rock-paper-scissors'
+        },
+        checkers:{
+            href: '/checkers',
+            name: 'Checkers'
+        },
+        chest:{
+            href: '/chest',
+            name: 'Chest'
+        },
+    }
 }
