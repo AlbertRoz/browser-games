@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #262626;
+}
+
+#root {
+    display: grid;
+    grid-template-areas: 
+            "head head"
+            "sidebar content"
+            "sidebar content";
+    grid-template-rows: 100px 1fr;
+    grid-template-columns: 260px 1fr;
+}
+
+#head {
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+}
+#logoText {
+    color: #FFFAFA;
+    font-size: 50px;
+    user-select: none;
+    cursor: pointer;
+    height: min-content;
+}
+
+#sidebar {
+    grid-area: sidebar;
+}
+.sidebar-cont{
+    margin-left: 16px;
+    
+}
+.sidebar-cont>a{
+    font-size: 28px;
+    color: #FFFAFA;
+    border-radius: 6px;
+    display: block;
+    padding: 10px;
+    user-select: none;
+}
+.sidebar-cont a:hover{
+    background-color: rgba(255,255,255, 0.2);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#contant {
+    grid-area: contant;
+}
