@@ -1,9 +1,5 @@
 export const config = {
     sidebar: {
-        login:{
-            href:'/login',
-            name:'Login'
-        },
         games:{
             href: '/games',
             name: 'Games'
@@ -23,10 +19,18 @@ export const config = {
     },
 
     header: {
-        main:{
-            href: '/main',
-            name: 'Games'
+        // logo:{
+        //     href: '/main',
+        //     name: 'Games'
+        // },
+        signin:{
+            href:'/signIn',
+            name:'Sign in'
         },
+        signup:{
+            href:'/signUp',
+            name:'Sign up'
+        }
     },
 
     gameCard: {

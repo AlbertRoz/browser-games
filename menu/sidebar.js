@@ -14,7 +14,7 @@ Object.entries(config.sidebar).map(([key, { href, name }], index) => {
     sidebarElement.dataset.section = key
     sidebarContainer.append(sidebarElement)
 
-    if(index === 1){
+    if(index === 0){
         sidebarElement.classList.add('active')
     }
     
