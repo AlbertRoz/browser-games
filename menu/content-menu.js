@@ -12,14 +12,15 @@ export function createInput(type, text, name) {
     return input
 }
 
-const loginLink = document.querySelector('[data-section="login"]')
-loginLink.addEventListener('click',(e)=>{
+const signinLink = document.querySelector('[data-section="signin"]')
+signinLink.addEventListener('click',(e)=>{
     e.preventDefault()
 
     root.querySelector('.active').classList.remove('active')
-    loginLink.classList.add('active')
+    e.target.classList.add('active')
 
     const form = document.createElement('form')
+    form.id = 'signin-signup'
     
     const emailInput = createInput('email','Email','email')
     const passwordInput = createInput('password','Password','password')
@@ -32,14 +33,47 @@ loginLink.addEventListener('click',(e)=>{
     form.appendChild(passwordInput)
     form.appendChild(submitBtn)
 
+    contentMenu.innerHTML = ''
     contentMenu.appendChild(form)
     
 })
+
+const signupLink = document.querySelector('[data-section="signup"]')
+signupLink.addEventListener('click',(e)=>{
+    e.preventDefault()
+
+    root.querySelector('.active').classList.remove('active')
+    e.target.classList.add('active')
+
+    const form = document.createElement('form')
+    form.id = 'signin-signup'
+    
+    const emailInput = createInput('email','Email','email')
+    const passwordInput = createInput('password','Password','password')
+    const nameInput = createInput('name','Name','name')
+
+    const submitBtn = document.createElement('input')
+    submitBtn.type = 'submit'
+    submitBtn.value = 'Регистрация!'
+
+    form.appendChild(emailInput)
+    form.appendChild(passwordInput)
+    form.appendChild(nameInput)
+    form.appendChild(submitBtn)
+
+    contentMenu.innerHTML = ''
+    contentMenu.appendChild(form)
+})
+
+
 
 const gamesLink = document.querySelector('[data-section="games"]')
 gamesLink.addEventListener('click', (e) =>{
     e.preventDefault();
 
     root.querySelector('.active').classList.remove('active')
-    gamesLink.classList.add('active')
+    e.target.classList.add('active')
+
+
+    contentMenu.innerHTML = ''
 })
