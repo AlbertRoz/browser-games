@@ -19,6 +19,8 @@ signinLink.addEventListener('click',(e)=>{
     root.querySelector('.active').classList.remove('active')
     e.target.classList.add('active')
 
+    const divForForm = document.createElement('div')
+    divForForm.id = 'divForForm'
     const form = document.createElement('form')
     form.id = 'signin-signup'
     
@@ -26,15 +28,17 @@ signinLink.addEventListener('click',(e)=>{
     const passwordInput = createInput('password','Password','password')
 
     const submitBtn = document.createElement('input')
+    submitBtn.id = 'submitBtn'
     submitBtn.type = 'submit'
-    submitBtn.value = 'Войти!'
+    submitBtn.value = 'Sign in!'
 
     form.appendChild(emailInput)
     form.appendChild(passwordInput)
     form.appendChild(submitBtn)
 
     contentMenu.innerHTML = ''
-    contentMenu.appendChild(form)
+    contentMenu.appendChild(divForForm)
+    divForForm.appendChild(form)
     
 })
 
@@ -45,6 +49,8 @@ signupLink.addEventListener('click',(e)=>{
     root.querySelector('.active').classList.remove('active')
     e.target.classList.add('active')
 
+    const divForForm = document.createElement('div')
+    divForForm.id = 'divForForm'
     const form = document.createElement('form')
     form.id = 'signin-signup'
     
@@ -53,8 +59,9 @@ signupLink.addEventListener('click',(e)=>{
     const nameInput = createInput('name','Name','name')
 
     const submitBtn = document.createElement('input')
+    submitBtn.id = 'submitBtn'
     submitBtn.type = 'submit'
-    submitBtn.value = 'Регистрация!'
+    submitBtn.value = 'Sign up!'
 
     form.appendChild(emailInput)
     form.appendChild(passwordInput)
@@ -62,7 +69,9 @@ signupLink.addEventListener('click',(e)=>{
     form.appendChild(submitBtn)
 
     contentMenu.innerHTML = ''
-    contentMenu.appendChild(form)
+    contentMenu.appendChild(divForForm)
+    divForForm.appendChild(form)
+
 })
 
 
