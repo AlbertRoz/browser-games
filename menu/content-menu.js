@@ -1,4 +1,5 @@
-import { root, contentMenu } from "./main.js";
+import { root, contentMenu, headMenu, sidebarMenu } from "./main.js";
+import { config } from "../config.js";
 
 root.appendChild(contentMenu)
 contentMenu.id = 'content'
@@ -12,20 +13,22 @@ export function createInput(type, text, name) {
     return input
 }
 
-const signinLink = document.querySelector('[data-section="signin"]')
-signinLink.addEventListener('click',(e)=>{
-    e.preventDefault()
+export function renderGamesCard(){
+    alert('UI')
+    const div = document.createElement('div')
 
-    root.querySelector('.active').classList.remove('active')
-    e.target.classList.add('active')
+    return div
+}
+
+export function renderSignIn(){
 
     const divForForm = document.createElement('div')
     divForForm.id = 'divForForm'
     const form = document.createElement('form')
     form.id = 'signin-signup'
-    
-    const emailInput = createInput('email','Email','email')
-    const passwordInput = createInput('password','Password','password')
+
+    const emailInput = createInput('email', 'Email', 'email')
+    const passwordInput = createInput('password', 'Password', 'password')
 
     const submitBtn = document.createElement('input')
     submitBtn.id = 'submitBtn'
@@ -35,28 +38,21 @@ signinLink.addEventListener('click',(e)=>{
     form.appendChild(emailInput)
     form.appendChild(passwordInput)
     form.appendChild(submitBtn)
-
-    contentMenu.innerHTML = ''
-    contentMenu.appendChild(divForForm)
     divForForm.appendChild(form)
+
+    return divForForm
+}
+
+export function renderSignUp(){
     
-})
-
-const signupLink = document.querySelector('[data-section="signup"]')
-signupLink.addEventListener('click',(e)=>{
-    e.preventDefault()
-
-    root.querySelector('.active').classList.remove('active')
-    e.target.classList.add('active')
-
     const divForForm = document.createElement('div')
     divForForm.id = 'divForForm'
     const form = document.createElement('form')
     form.id = 'signin-signup'
-    
-    const emailInput = createInput('email','Email','email')
-    const passwordInput = createInput('password','Password','password')
-    const nameInput = createInput('name','Name','name')
+
+    const emailInput = createInput('email', 'Email', 'email')
+    const passwordInput = createInput('password', 'Password', 'password')
+    const nameInput = createInput('name', 'Name', 'name')
 
     const submitBtn = document.createElement('input')
     submitBtn.id = 'submitBtn'
@@ -67,22 +63,58 @@ signupLink.addEventListener('click',(e)=>{
     form.appendChild(passwordInput)
     form.appendChild(nameInput)
     form.appendChild(submitBtn)
-
-    contentMenu.innerHTML = ''
-    contentMenu.appendChild(divForForm)
     divForForm.appendChild(form)
 
+    return divForForm
+}
+
+export function renderChat(){
+    alert('UI')
+    const div = document.createElement('div')
+
+    return div
+}
+
+export function renderInfo(){
+    alert('UI')
+    const div = document.createElement('div')
+
+    return div
+}
+
+export function renderRandomGame(){
+    alert('UI')
+    const div = document.createElement('div')
+
+    return div
+}
+
+headMenu.addEventListener('click',(e) => {
+    const {target} = e
+    
+    if(target instanceof HTMLAnchorElement){
+        e.preventDefault()
+        contentMenu.innerHTML = ''
+        root.querySelector('.active').classList.remove('active')
+        target.classList.add('active')
+
+        const element = config.header[target.dataset.section].render()
+
+        contentMenu.appendChild(element)
+    }
 })
 
+sidebarMenu.addEventListener('click',(e) => {
+    const {target} = e
+    
+    if(target instanceof HTMLAnchorElement){
+        e.preventDefault()
+        contentMenu.innerHTML = ''
+        root.querySelector('.active').classList.remove('active')
+        target.classList.add('active')
 
+        const element = config.sidebar[target.dataset.section].render()
 
-const gamesLink = document.querySelector('[data-section="games"]')
-gamesLink.addEventListener('click', (e) =>{
-    e.preventDefault();
-
-    root.querySelector('.active').classList.remove('active')
-    e.target.classList.add('active')
-
-
-    contentMenu.innerHTML = ''
+        contentMenu.appendChild(element)
+    }
 })

@@ -1,56 +1,63 @@
+import { renderGamesCard, renderChat, renderInfo, renderSignIn, renderSignUp, renderRandomGame } from "./menu/content-menu.js"
+
 export const config = {
     sidebar: {
-        games:{
+        games: {
             href: '/games',
-            name: 'Games'
+            name: 'Games',
+            render: renderGamesCard,
         },
-        chat:{
+        chat: {
             href: '/chat',
-            name: 'chat'
+            name: 'chat',
+            render: renderChat,
         },
-        randomeGame:{
+        randomeGame: {
             href: '/randomeGame',
-            name: 'Randome game'
+            name: 'Randome game',
+            render: renderRandomGame
         },
-        info:{
-            href:'/info',
-            name:'info'
+        info: {
+            href: '/info',
+            name: 'info',
+            render: renderInfo,
         },
     },
-
     header: {
         // logo:{
         //     href: '/main',
-        //     name: 'Games'
+        //     name: 'Games',
+        //     render: renderLogo,
         // },
-        signin:{
-            href:'/signIn',
-            name:'Sign in'
+        signin: {
+            href: '/signIn',
+            name: 'Sign in',
+            render: renderSignIn,
         },
-        signup:{
-            href:'/signUp',
-            name:'Sign up'
+        signup: {
+            href: '/signUp',
+            name: 'Sign up',
+            render: renderSignUp,
         }
     },
-
     gameCard: {
-        tictactoe:{
+        tictactoe: {
             href: '/tictactoe',
             name: 'TicTacToe'
         },
-        snake:{
+        snake: {
             href: '/snake',
             name: 'Snake'
         },
-        rockpaperscissors:{
+        rockpaperscissors: {
             href: '/rock-paper-scissors',
             name: 'Rock-paper-scissors'
         },
-        checkers:{
+        checkers: {
             href: '/checkers',
             name: 'Checkers'
         },
-        chest:{
+        chest: {
             href: '/chest',
             name: 'Chest'
         },
