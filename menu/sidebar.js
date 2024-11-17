@@ -1,5 +1,6 @@
 import { config } from "../config.js";
 import { root, sidebarMenu } from "./main.js";
+import { renderGamesCard } from "./content-menu.js";
 
 root.appendChild(sidebarMenu)
 sidebarMenu.id = 'sidebar'
@@ -16,6 +17,7 @@ Object.entries(config.sidebar).map(([key, { href, name }], index) => {
 
     if(index === 0){
         sidebarElement.classList.add('active')
+        renderGamesCard()
     }
     
     return sidebarContainer
