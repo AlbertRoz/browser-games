@@ -14,13 +14,42 @@ export function createInput(type, text, name) {
 }
 
 export function renderGamesCard(){
-    alert('UI')
-    const div = document.createElement('div')
 
-    return div
+    const contForCard = document.createElement('div')
+    contForCard.id = 'contForCard'
+
+    Object.entries(config.gameCard).map(([key, { href, name, image }]) =>{
+        
+        const divCardContainer = document.createElement('div')
+        divCardContainer.id = 'divCardContainer'
+        const imgCard = document.createElement('img')
+        imgCard.id = 'imgForCard'
+        const divContForPInCard = document.createElement('div')
+        divContForPInCard.id = 'divContForPInCard'
+        const textNameGame = document.createElement('p')
+        textNameGame.id = 'textNameGame'
+        imgCard.src = image
+        textNameGame.textContent = name
+        divCardContainer.href = href
+        divCardContainer.dataset.section = key
+
+        divCardContainer.appendChild(imgCard)
+        divCardContainer.appendChild(divContForPInCard)
+        divContForPInCard.appendChild(textNameGame)
+
+        return divCardContainer
+    })
+    .forEach((div)=>{
+        contForCard.appendChild(div)
+    })
+
+    return contForCard
 }
 
 export function renderSignIn(){
+
+    const contForSignInAndSignUp = document.createElement('div')
+    contForSignInAndSignUp.id = 'contForSignInAndSignUp'
 
     const divForForm = document.createElement('div')
     divForForm.id = 'divForForm'
@@ -39,12 +68,15 @@ export function renderSignIn(){
     form.appendChild(passwordInput)
     form.appendChild(submitBtn)
     divForForm.appendChild(form)
+    contForSignInAndSignUp.appendChild(divForForm)
 
-    return divForForm
+    return contForSignInAndSignUp
 }
 
 export function renderSignUp(){
     
+    const contForSignInAndSignUp = document.createElement('div')
+    contForSignInAndSignUp.id = 'contForSignInAndSignUp'
     const divForForm = document.createElement('div')
     divForForm.id = 'divForForm'
     const form = document.createElement('form')
@@ -64,8 +96,9 @@ export function renderSignUp(){
     form.appendChild(nameInput)
     form.appendChild(submitBtn)
     divForForm.appendChild(form)
+    contForSignInAndSignUp.appendChild(divForForm)
 
-    return divForForm
+    return contForSignInAndSignUp
 }
 
 export function renderChat(){

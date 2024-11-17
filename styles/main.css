@@ -36,6 +36,7 @@
     width: 50%;
     margin-left: 32px;
     background-color: #252525;
+    user-select: none;
 }
 #right-cont{
     width: 50%;
@@ -43,6 +44,7 @@
     background-color: #252525;
     display: flex;
     justify-content: end;
+    user-select: none;
 }
 .header-cont{
     margin: 10px;
@@ -83,6 +85,9 @@
 #content {
     grid-area: content;
     padding: 20px 0px;
+}
+
+#contForSignInAndSignUp{
     display: flex;
     height: 100%;
     justify-content: space-around;
@@ -113,4 +118,43 @@ input{
     display: block;
     font-size: 26px;
     margin-bottom: 16px;
+}
+
+#contForCard{
+    display: flex;
+    justify-content: space-around;
+
+}
+#divContainerForCard{
+    background-color: #252525;
+    border-radius: 16px;
+    border: #404040 solid 0.5px;
+    width: 200px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+#imgForCard{
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+#divContForPInCard{
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    width: 200px;
+    height: 100px;
+    background-color: #252525;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#textNameGame{
+    font-size: 30px;
+    background-color: #252525;
+    color: #FFFAFA;
 }
